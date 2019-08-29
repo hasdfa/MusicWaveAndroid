@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+
+                android:text="@string/discover"
+                android:fontFamily="@font/montserrat_extrabold"
+                android:textSize="32sp"
+                android:textColor="@android:color/black"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/profile"
+
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+
+                android:layout_marginTop="16dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="16dp"
+                android:layout_alignParentEnd="true"/>
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/mViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="268dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/titleView"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/mViewPager"/>
+    </RelativeLayout>
+</ScrollView>

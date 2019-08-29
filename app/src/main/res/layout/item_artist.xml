@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@android:drawable/btn_star"/>
+
+    <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="The Beatles"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="24sp"
+
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@+id/imageView"
+
+            android:layout_marginStart="9dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/playcountImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_play_circle"
+            android:tint="@android:color/black"
+
+            android:layout_below="@+id/name"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="4dp"/>
+
+    <TextView
+            android:id="@+id/playcountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="1.5M"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+
+            android:layout_alignTop="@+id/playcountImage"
+            android:layout_alignBottom="@+id/playcountImage"
+            android:layout_toEndOf="@id/playcountImage"
+            android:layout_marginStart="8dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/listenersImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_people"
+            android:tint="@android:color/black"
+
+            android:layout_below="@+id/name"
+            android:layout_toEndOf="@id/playcountText"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="16dp"/>
+
+    <TextView
+            android:id="@+id/listenersText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:text="114K"
+            android:fontFamily="@font/montserrat_medium"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+
+            android:layout_alignTop="@+id/listenersImage"
+            android:layout_alignBottom="@+id/listenersImage"
+            android:layout_toEndOf="@id/listenersImage"
+            android:layout_marginStart="8dp"/>
+
+</RelativeLayout>

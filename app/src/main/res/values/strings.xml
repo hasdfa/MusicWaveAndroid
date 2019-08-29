@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MusicWave</string>
+    <string name="playlist">Playlist</string>
+    <string name="discover">Discover</string>
+</resources>

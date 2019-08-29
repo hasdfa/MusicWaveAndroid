@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mParent">
+
+    <com.vadim.hasdfa.musicwave.view.wavebar.WaveSideBar
+            android:id="@+id/mLeftSideBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="32dp"/>
+
+    <com.vadim.hasdfa.musicwave.view.wavebar.WaveSideBar
+            android:id="@+id/mRightSideBar"
+            android:rotation="180"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="64dp"/>
+
+    <com.vadim.hasdfa.musicwave.view.MorphImage
+            android:id="@+id/mPlayButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:translationZ="128dp"
+
+            app:firstDrawable="@drawable/anim_pause_to_play"
+            app:secondDrawable="@drawable/anim_play_to_pause"/>
+
+    <RelativeLayout
+            android:id="@+id/mLoadingPane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="132dp"
+            android:background="@android:color/white">
+        <androidx.core.widget.ContentLoadingProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"/>
+    </RelativeLayout>
+
+</RelativeLayout>
